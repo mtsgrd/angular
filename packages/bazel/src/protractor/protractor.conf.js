@@ -104,9 +104,9 @@ if (process.env['WEB_TEST_METADATA']) {
       const chromeDriver = require.resolve(webTestNamedFiles['CHROMEDRIVER']);
       const args = [];
       if (headless) {
-        args.push('--no-sandbox');
         args.push('--headless');
         args.push('--disable-gpu');
+        args.push('--no-sandbox');
       }
       setConf(conf, 'directConnect', true, 'is set to true for chrome');
       setConf(conf, 'chromeDriver', chromeDriver, 'is determined by the browsers attribute');
