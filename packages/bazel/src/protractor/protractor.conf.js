@@ -104,6 +104,7 @@ if (process.env['WEB_TEST_METADATA']) {
       const chromeDriver = require.resolve(webTestNamedFiles['CHROMEDRIVER']);
       const args = [];
       if (headless) {
+        args.push('--no-sandbox');
         args.push('--headless');
         args.push('--disable-gpu');
       }
